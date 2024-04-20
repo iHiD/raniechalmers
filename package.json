@@ -6,16 +6,17 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "lint-staged": {
-      "**/*": "prettier --write --ignore-unknown"
-    },
+    "lint-staged": "prettier --write --ignore-unknown",
     "preview": "vite preview",
     "prepare": "husky"
   },
   "dependencies": {
     "@supabase/supabase-js": "^2.42.5",
+    "@uppy/react": "^3.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "uppy": "^3.24.3",
     "uuid": "^9.0.1"
   },
   "devDependencies": {

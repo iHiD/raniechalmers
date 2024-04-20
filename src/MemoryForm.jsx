@@ -2,11 +2,7 @@ import { useState, useEffect } from "react";
 import { supabase } from "./utils/supabaseClient";
 import { v4 as uuidv4 } from "uuid";
 
-import reactLogo from "./assets/react.svg";
-import viteLogo from "/vite.svg";
-import "./App.css";
-
-function App() {
+function MemoryForm() {
   const [name, setName] = useState("");
   const [memory, setMemory] = useState("");
   const [saved, setSaved] = useState(false);
@@ -24,15 +20,17 @@ function App() {
     e.preventDefault();
     const { error } = await supabase
       .from("memories")
-      .upsert({ id: uuid, text: memory });
+      .upsert({
+        id: uuid,
+        person: name,
+        text: memory
+      });
 
     setSaved(true);
   }
 
   return (
     <>
-      <h1>Raine Chalmers</h1>
-      <h2>Leave a message</h2>
       {saved ? (
         <div>Your memory has been saved</div>
       ) : (
@@ -54,4 +52,5 @@ function App() {
   );
 }
 
-export default App;
+export default MemoryForm;
+
