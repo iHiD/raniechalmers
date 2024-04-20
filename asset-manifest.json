@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/raniechalmers/static/css/main.08355f9c.css",
+    "main.js": "/raniechalmers/static/js/main.21d41807.js",
+    "static/js/952.6679ac32.chunk.js": "/raniechalmers/static/js/952.6679ac32.chunk.js",
+    "index.html": "/raniechalmers/index.html",
+    "main.08355f9c.css.map": "/raniechalmers/static/css/main.08355f9c.css.map",
+    "main.21d41807.js.map": "/raniechalmers/static/js/main.21d41807.js.map",
+    "952.6679ac32.chunk.js.map": "/raniechalmers/static/js/952.6679ac32.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.08355f9c.css",
+    "static/js/main.21d41807.js"
+  ]
+}
