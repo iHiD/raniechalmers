@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from "react";
 import Uppy from "@uppy/core";
-import Webcam from "@uppy/webcam";
 import { Dashboard } from "@uppy/react";
-import { Tus } from "uppy";
+import Tus from "@uppy/tus";
+import { v4 as uuidv4 } from "uuid";
 
 import "@uppy/core/dist/style.min.css";
 import "@uppy/dashboard/dist/style.min.css";
-import "@uppy/webcam/dist/style.min.css";
 
 import { supabaseProjectId, supabaseAnonKey } from "./utils/supabaseClient";
 
@@ -33,10 +32,12 @@ export default function () {
         ],
       })
       .on("file-added", (file) => {
+        console.log(file)
+        console.log(file.extension)
         file.meta = {
           ...file.meta,
           bucketName: bucketName,
-          objectName: folderName ? `${folderName}/${file.name}` : file.name,
+          objectName: `${folderName}/${uuidv4()}.${file.extension}`,
           contentType: file.type,
         };
       })

@@ -35,11 +35,13 @@ function MemoryForm() {
         <div>Your memory has been saved</div>
       ) : (
         <form>
+          <label>Your name (optional)</label>
           <input
             value={name}
             onChange={handleNameChange}
             placeholder="Your name (optional)"
           />
+          <label>Share your memories</label>
           <textarea
             value={memory}
             onChange={handleMemoryChange}
