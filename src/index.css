@@ -3,31 +3,56 @@
 @tailwind utilities;
 
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+        "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
+        "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+        monospace;
 }
 
-nav {
+/**************/
+/* Containers */
+/**************/
+.container {
+    width: 100%;
+    @apply mx-auto;
 }
 
-main {
+.container {
+    max-width: 710px;
+    padding: 0 var(--container-padding-x);
 }
 
+body {
+    background-image: url("background.jpg");
+}
 label {
     @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
 }
-input, textarea {
+input,
+textarea {
     @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
 }
-button {
-@apply select-none rounded-lg bg-gradient-to-tr from-gray-900 to-gray-800 py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-white shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+button, .btn {
+    @apply select-none rounded-6 bg-[#652566] border-[#ae55af] border-2 text-white py-12 px-20 text-center align-middle font-sans text-16 font-semibold shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
+}
+p {
+    @apply text-18;
+}
+nav {
+    a {
+        @apply py-4;
+        @apply text-16;
+        @apply border-b-2 border-transparent;
+        &.selected {
+            @apply font-semibold;
+            @apply border-white;
+        }
+    }
 }

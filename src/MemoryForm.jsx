@@ -18,13 +18,11 @@ function MemoryForm() {
 
   async function handleSubmit(e) {
     e.preventDefault();
-    const { error } = await supabase
-      .from("memories")
-      .upsert({
-        id: uuid,
-        person: name,
-        text: memory
-      });
+    const { error } = await supabase.from("memories").upsert({
+      id: uuid,
+      person: name,
+      text: memory,
+    });
 
     setSaved(true);
   }
@@ -55,4 +53,3 @@ function MemoryForm() {
 }
 
 export default MemoryForm;
-

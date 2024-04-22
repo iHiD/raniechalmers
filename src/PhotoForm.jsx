@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import Uppy from "@uppy/core";
-import { Dashboard } from "@uppy/react";
+import { DashboardModal } from "@uppy/react";
 import Tus from "@uppy/tus";
 import { v4 as uuidv4 } from "uuid";
 
@@ -15,9 +15,17 @@ const supabaseUploadURL = `https://${supabaseProjectId}.supabase.co/storage/v1/u
 
 export default function () {
   const [saved, setSaved] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
-  const [uppy] = useState(() =>
-    new Uppy()
+  const [uppy] = useState(() => {
+    const obj = new Uppy();
+    obj.setOptions({
+      restrictions: {
+        maxFileSize: 1073741824,
+      },
+    });
+
+    obj
       .use(Tus, {
         endpoint: supabaseUploadURL,
         headers: {
@@ -32,8 +40,6 @@ export default function () {
         ],
       })
       .on("file-added", (file) => {
-        console.log(file)
-        console.log(file.extension)
         file.meta = {
           ...file.meta,
           bucketName: bucketName,
@@ -43,15 +49,32 @@ export default function () {
       })
       .on("complete", (result) => {
         setSaved(true);
-      })
-  );
+      });
+    return obj;
+  });
+
+  function handleOpen() {
+    setModalOpen(true);
+  }
+
+  function handleClose() {
+    setModalOpen(false);
+  }
 
   return (
     <>
       {saved ? (
         <div>Your photos have been saved</div>
       ) : (
-        <Dashboard uppy={uppy} />
+        <>
+          <button onClick={handleOpen}>Upload Photo(s)</button>
+          <DashboardModal
+            uppy={uppy}
+            proudlyDisplayPoweredByUppy={false}
+            open={modalOpen}
+            onRequestClose={handleClose}
+          />
+        </>
       )}
     </>
   );
