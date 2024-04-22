@@ -25,34 +25,64 @@ code {
 }
 
 .container {
-    max-width: 710px;
-    padding: 0 var(--container-padding-x);
+    max-width: 800px;
+    @apply py-0 px-[5%];
 }
 
 body {
     background-image: url("background.jpg");
 }
 label {
-    @apply block mb-2 text-sm font-medium text-gray-900 dark:text-white;
+    @apply block mb-2 text-sm font-medium text-gray-900;
 }
 input,
 textarea {
-    @apply bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+    @apply bg-gray-50 border border-gray-400 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5;
 }
 button, .btn {
     @apply select-none rounded-6 bg-[#652566] border-[#ae55af] border-2 text-white py-12 px-20 text-center align-middle font-sans text-16 font-semibold shadow-md shadow-gray-900/10 transition-all hover:shadow-lg hover:shadow-gray-900/20 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none;
 }
 p {
-    @apply text-18;
+    @apply text-18 text-balance;
 }
 nav {
     a {
         @apply py-4;
-        @apply text-16;
+        @apply text-20 md:text-16;
         @apply border-b-2 border-transparent;
-        &.selected {
-            @apply font-semibold;
-            @apply border-white;
-        }
     }
+    a.selected {
+        @apply font-semibold;
+        @apply md:border-white;
+    }
+}
+
+.react-confirm-alert {
+    .confirm-alert {
+        @apply max-w-[500px];
+        @apply mx-[5%];
+        @apply bg-white;
+        @apply shadow-[0_0_30px_0_rgba(0,0,0,0.3)];
+        @apply px-20 py-16;
+        @apply rounded-8;
+    }
+}
+.ReactModal__Overlay {
+    background-color:rgba(255, 255, 255, 0.95) !important;
+}
+.ReactModal__Content {
+    @apply border-none;
+        @apply bg-white;
+        @apply shadow-[0_0_30px_0_rgba(0,0,0,0.3)];
+        @apply px-20 py-16;
+        @apply rounded-8;
+        @apply overflow-auto;
+        @apply max-h-[90vh];
+        @apply md:mt-[5vh];
+}
+.react-confirm-alert-overlay {
+    opacity:1;
+    animation:none;
+}
+.uppy-Dashboard-dropFilesHereHint {
 }

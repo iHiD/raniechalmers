@@ -3,6 +3,8 @@ import Uppy from "@uppy/core";
 import { DashboardModal } from "@uppy/react";
 import Tus from "@uppy/tus";
 import { v4 as uuidv4 } from "uuid";
+import { confirmAlert } from "react-confirm-alert"; // Import
+import "react-confirm-alert/src/react-confirm-alert.css"; // Import css
 
 import "@uppy/core/dist/style.min.css";
 import "@uppy/dashboard/dist/style.min.css";
@@ -14,7 +16,6 @@ const folderName = "production";
 const supabaseUploadURL = `https://${supabaseProjectId}.supabase.co/storage/v1/upload/resumable`;
 
 export default function () {
-  const [saved, setSaved] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
 
   const [uppy] = useState(() => {
@@ -48,7 +49,22 @@ export default function () {
         };
       })
       .on("complete", (result) => {
-        setSaved(true);
+        setModalOpen(false)
+
+        confirmAlert({
+          customUI: ({ onClose }) => {
+            return (
+              <div className="confirm-alert">
+                <p className="font-semibold mb-4">All Done 👍</p>
+                <p className="mb-12 text-16">
+              Your photos/videos have been sent to us. Thank you so much for sharing them. Please come back at any time to add more.
+                </p>
+                <button onClick={onClose}>Close window</button>
+              </div>
+            );
+          },
+        });
+
       });
     return obj;
   });
@@ -63,19 +79,13 @@ export default function () {
 
   return (
     <>
-      {saved ? (
-        <div>Your photos have been saved</div>
-      ) : (
-        <>
-          <button onClick={handleOpen}>Upload Photo(s)</button>
-          <DashboardModal
-            uppy={uppy}
-            proudlyDisplayPoweredByUppy={false}
-            open={modalOpen}
-            onRequestClose={handleClose}
-          />
-        </>
-      )}
+      <button onClick={handleOpen}>Upload photos or videos</button>
+      <DashboardModal
+        uppy={uppy}
+        proudlyDisplayPoweredByUppy={false}
+        open={modalOpen}
+        onRequestClose={handleClose}
+      />
     </>
   );
 }
