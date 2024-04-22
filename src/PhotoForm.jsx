@@ -50,6 +50,7 @@ export default function () {
       })
       .on("complete", (result) => {
         setModalOpen(false)
+        uppy.cancelAll()
 
         confirmAlert({
           customUI: ({ onClose }) => {
