@@ -45,7 +45,7 @@ function FuneralPage() {
         </h2>
         <p className="mb-8">
           After the funeral, everyone is invited to join the family in
-          remembering Ranie&apos;s life. We&apos;ll be sharing memories and stories together at{" "}
+          remembering Ranie&apos;s life at{" "}
           <a
             className="text-blue-800 underline font-semibold"
             href="https://maps.app.goo.gl/r6zFF3WKJ6Lv5nBD7"
