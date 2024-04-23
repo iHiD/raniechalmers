@@ -16,15 +16,13 @@ function FuneralPage() {
         </h2>
 
         <p className="mb-12">
-          The funeral service will take place on{" "}
-          <strong className="font-semibold">Tuesday 7th May 2024 at 1pm</strong>
-          . It will be held at{" "}
-          <a
+          The funeral service will take place at <a
             className="text-blue-800 underline font-semibold"
             href="https://maps.app.goo.gl/8frNb2WYqHBgCwt59"
           >
             Durham Crematorium
-          </a>
+          </a>{" "}on{" "}
+          <strong className="font-semibold">Tuesday 7th May 2024 at 1pm</strong>
           .
         </p>
         <p>
@@ -36,7 +34,7 @@ function FuneralPage() {
             livestreamed here
           </a>{" "}
           (PIN: 119-6006) for those that are unable to attend in person. A
-          recording will be available at the same URL for 2 weeks after the
+          recording will be available at the same URL for 7 days after the
           service.
         </p>
 
@@ -58,9 +56,8 @@ function FuneralPage() {
         <h2 className="font-heading text-48 leading-100 mt-32 mb-8">Dress</h2>
         <p>
           Ranie loved bold colours and wouldn't want to see us all dressed in
-          black.{" "}
-            Please dress for a celebration of her life, not a mourning of her
-            death.
+          black.
+          Please dress for a celebration of her life.
           The family will be wearing smart/casual clothes with a splash of
           colour.
         </p>
@@ -68,11 +65,12 @@ function FuneralPage() {
         <h2 className="font-heading text-48 leading-100 mt-32 mb-8">
           Flowers &amp; Donations
         </h2>
+        <p className="mb-24">
+          Rather than bringing flowers, if you would like to honour Ranie’s
+          memory another way, we’d welcome donations to Homestart Teeside, a charity close to Ranie’s heart.
+        </p>
         <p>
-   Please do not bring
-          extra flowers to to the funeral. If you would like to honour Ranie’s
-          memory another way, we will be collecting donations for a charity close to Ranie's heart.
-          Please check back nearer the funeral for details.
+          <a href="https://homestart-teesside.org.uk/" className="btn">Donate to Homestart Teeside</a>
         </p>
       </div>
     </>

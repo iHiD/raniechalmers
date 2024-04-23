@@ -14,7 +14,7 @@ function IndexPage() {
         </div>
         <img src={FrontImg} className="w-[100%] max-w-[400px] block mx-auto mb-16" />
         <div className="font-subheading text-[32px] mb-8">
-          14th May 1951 - 11th April 2024
+          14th May 1952 - 11th April 2024
         </div>
         <img src={LineImg} className="max-w-[300px] block mx-auto mb-20 w-[100%]" />
         <div className="text-16 max-w-[420px] mx-auto text-balance mb-16 hidden md:block">

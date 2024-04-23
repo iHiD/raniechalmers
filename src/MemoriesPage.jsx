@@ -15,9 +15,8 @@ function MemoriesPage() {
           Ranie’s Memory Book
         </h1>
         <p className="text-18 mb-12">
-          We are creating a memory book for our beloved mum, wife, sister, nanny
-          and friend, as something for us all to treasure and to share with
-          Ranie&apos;s grandchildren when they're older.
+          We are creating a Memory Book for our beloved Mum, Wife, Sister, Nanny
+          and Friend, as something for us all to treasure.
         </p>
 
         <p className="text-18 mb-12"></p>
@@ -33,24 +32,13 @@ function MemoriesPage() {
         </p>
 
         <p className="text-18 mb-20">
-          We will leave this page up until around June when we will have
-          capacity to put the book together so you have until then to add to it.
+          We will leave this page up until around June to give everyone time to add to it and us the capacity to put the book together and share with you.
         </p>
 
         <div className="flex flex-col items-stretch md:flex-row gap-12 items-center justify-center">
           <MemoryForm />
           <PhotoForm />
         </div>
-
-        <h2 className="font-heading text-48 leading-100 mt-40 mb-4">
-          Keep Updated
-        </h2>
-        <p className="text-18 mb-16">
-          If you&apos;d to be notified when the Memory Book is ready, please
-          leave your name, phone and/or email below, and we&apos;ll let you know when
-          it&apos;s ready.
-        </p>
-        <UpdateForm />
       </div>
     </>
   );
