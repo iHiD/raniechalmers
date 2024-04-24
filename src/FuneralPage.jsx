@@ -34,7 +34,7 @@ function FuneralPage() {
             livestreamed here
           </a>{" "}
           (PIN: 119-6006) for those that are unable to attend in person. A
-          recording will be available at the same URL for 7 days after the
+          recording will be available at the same link for 7 days after the
           service.
         </p>
 
@@ -42,21 +42,19 @@ function FuneralPage() {
           The Wake
         </h2>
         <p className="mb-8">
-          After the funeral, everyone is invited to join the family in
-          remembering Ranie&apos;s life at{" "}
+          After the funeral, please join our family to celebrate 
+          Ranie&apos;s life at{" "}
           <a
             className="text-blue-800 underline font-semibold"
             href="https://maps.app.goo.gl/r6zFF3WKJ6Lv5nBD7"
           >
             The Honest Lawyer Hotel
-          </a>
-          . Please come and celebrate Ranie's life with us.
+          </a>.
         </p>
 
         <h2 className="font-heading text-48 leading-100 mt-32 mb-8">Dress</h2>
         <p>
-          Ranie loved bold colours and wouldn't want to see us all dressed in
-          black.
+          Ranie loved bold colours so please don&apos;t feel the need to wear black.
           Please dress for a celebration of her life.
           The family will be wearing smart/casual clothes with a splash of
           colour.
@@ -67,10 +65,10 @@ function FuneralPage() {
         </h2>
         <p className="mb-24">
           Rather than bringing flowers, if you would like to honour Ranie’s
-          memory another way, we’d welcome donations to Homestart Teeside, a charity close to Ranie’s heart.
+          memory another way, we’d welcome donations to Homestart Teesside, a charity close to Ranie’s heart.
         </p>
         <p>
-          <a href="https://homestart-teesside.org.uk/" className="btn">Donate to Homestart Teeside</a>
+          <a href="https://homestart-teesside.org.uk/" className="btn">Donate to Homestart Teesside</a>
         </p>
       </div>
     </>
