@@ -33,7 +33,7 @@ function FuneralPage() {
           >
             livestreamed here
           </a>{" "}
-          (PIN: 119-6006) for those that are unable to attend in person. A
+          (PIN: 119-6006) for those unable to attend in person. A
           recording will be available at the same link for 7 days after the
           service.
         </p>

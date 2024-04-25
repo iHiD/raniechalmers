@@ -32,7 +32,7 @@ function MemoriesPage() {
         </p>
 
         <p className="text-18 mb-20">
-          We will leave this page up until mid-June to give everyone time to add to it. We will share it with you then.
+          We will leave this page up until mid-June to give everyone time to add to it and then share the finished book with you.
         </p>
 
         <div className="flex flex-col items-stretch md:flex-row gap-12 items-center justify-center">
