@@ -17,18 +17,27 @@ function IndexPage() {
           14th May 1952 - 11th April 2024
         </div>
         <img src={LineImg} className="max-w-[300px] block mx-auto mb-20 w-[100%]" />
-        <div className="text-16 max-w-[420px] mx-auto text-balance mb-16 hidden md:block">
-          Please use the two buttons below for funeral details
-          and to contribute your memories, photos and videos to Ranie&apos;s memory book.
-        </div>
-        <div className="flex flex-col items-stretch md:items-center md:flex-row gap-12 items-center justify-center">
-          <Link to={`/funeral`} className="btn">
-            Funeral Details
-          </Link>
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+          With heartfelt gratitude, thank you for the memories that you have shared with us over these past months of our beloved Ranie (Mum). We’ve gathered all of your stories and photos in the Memory Book below, including those shown during her funeral service, so that we can remember and celebrate her warmth and spirit together. xxxx
+        </p>
+    
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+          You can view and download a copy to keep here: 
+        </p>
+    
+
+        <div className="mb-20 flex flex-col items-stretch md:items-center md:flex-row gap-12 items-center justify-center">
           <Link to={`/memories`} className="btn">
-            Memory Book
+            View Memory Book
           </Link>
+          <a href="http://dvtd0lcqbpu61.cloudfront.net/memory-book.pdf" download target="_blank" className="btn">
+            Download Memory Book
+          </a>
+
         </div>
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+          You can still contribute your stories, thoughts, photos and videos of Ranie by emailing them to Nicole at <a class="text-[blue] underline" href="mailto:nicolechalmers1+memorybook@gmail.com">nicolechalmers1+memorybook@gmail.com</a>.
+        </p>
       </div>
     </>
   );

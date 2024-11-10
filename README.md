@@ -2,4 +2,4 @@
 
 # Deploy
 
-`npm run deploy`
+`bun run deploy`

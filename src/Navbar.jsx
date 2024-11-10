@@ -30,14 +30,6 @@ export default function Navbar({ selected }) {
           </li>
           <li>
             <Link
-              to={`/funeral`}
-              className={selected == "funeral" ? "selected" : ""}
-            >
-              Funeral Details
-            </Link>
-          </li>
-          <li>
-            <Link
               to={`/memories`}
               className={selected == "memories" ? "selected" : ""}
             >
