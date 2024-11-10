@@ -17,11 +17,11 @@ function IndexPage() {
           14th May 1952 - 11th April 2024
         </div>
         <img src={LineImg} className="max-w-[300px] block mx-auto mb-20 w-[100%]" />
-        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16">
           With heartfelt gratitude, thank you for the memories that you have shared with us over these past months of our beloved Ranie (Mum). We’ve gathered all of your stories and photos in the Memory Book below, including those shown during her funeral service, so that we can remember and celebrate her warmth and spirit together. xxxx
         </p>
     
-        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16">
           You can view and download a copy to keep here: 
         </p>
     
@@ -35,7 +35,7 @@ function IndexPage() {
           </a>
 
         </div>
-        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16 hidden md:block">
+        <p className="text-16 max-w-[550px] mx-auto text-balance mb-16">
           You can still contribute your stories, thoughts, photos and videos of Ranie by emailing them to Nicole at <a class="text-[blue] underline" href="mailto:nicolechalmers1+memorybook@gmail.com">nicolechalmers1+memorybook@gmail.com</a>.
         </p>
       </div>
