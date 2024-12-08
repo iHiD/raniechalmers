@@ -18,7 +18,7 @@ function IndexPage() {
         </div>
         <img src={LineImg} className="max-w-[300px] block mx-auto mb-20 w-[100%]" />
         <p className="text-16 max-w-[550px] mx-auto text-balance mb-16">
-          With heartfelt gratitude, thank you for the memories that you have shared with us over these past months of our beloved Ranie (Mum). We’ve gathered all of your stories and photos in the Memory Book below, including those shown during her funeral service, so that we can remember and celebrate her warmth and spirit together. xxxx
+          With heartfelt gratitude, thank you for the memories that you have shared with us over these past months of our beloved Ranie. We’ve gathered all of your stories and photos in the Memory Book below, including those shown during her funeral service, so that we can remember and celebrate her warmth and spirit together. xxxx
         </p>
     
         <p className="text-16 max-w-[550px] mx-auto text-balance mb-16">
